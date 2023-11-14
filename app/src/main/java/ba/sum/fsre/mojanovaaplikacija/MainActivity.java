@@ -3,6 +3,7 @@ package ba.sum.fsre.mojanovaaplikacija;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -46,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
                                         getApplicationContext(),
                                         "Uspješno ste se prijavili.",
                                         Toast.LENGTH_LONG).show();
+
+                                Intent i = new Intent(MainActivity.this, ProfileActivity.class);
+                                startActivity(i);
                             } else {
                                 Toast.makeText(
                                         getApplicationContext(),
